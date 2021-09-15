@@ -1,0 +1,18 @@
+{
+  "name": "cipher-gtarp",
+  "version": "1.0.0",
+  "description": "Decode cipher from https://i.imgur.com/CK1KizH.jpg",
+  "main": "cipher-decode.js",
+  "scripts": {
+    "start": "node cipher-decode.js"
+  },
+  "keywords": [
+    "cipher",
+    "gtarp"
+  ],
+  "author": "kevduc",
+  "license": "ISC",
+  "dependencies": {
+    "hjson": "^3.2.2"
+  }
+}

@@ -1,8 +1,8 @@
 const fs = require('fs')
 const HJSON = require('hjson')
 
-const cipher = new Map(HJSON.parse(fs.readFileSync('./cipher.hjson', 'utf-8')))
-const cipheredText = fs.readFileSync('./ciphered.txt', 'utf-8')
+const cipher = new Map(HJSON.parse(fs.readFileSync('./cipher-to-symbols.hjson', 'utf-8')))
+const cipheredText = fs.readFileSync('../ciphered.txt', 'utf-8')
 
 // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
 function escapeRegExp(string) {
@@ -21,5 +21,5 @@ function decipher(txt, cipher) {
 
 const decipheredText = decipher(cipheredText, cipher)
 
-fs.writeFileSync('./deciphered.txt', decipheredText)
+fs.writeFileSync('./ciphered-symbols.txt', decipheredText)
 console.log(decipheredText)
