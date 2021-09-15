@@ -19,4 +19,6 @@ function decipher(txt, cipher) {
 }
 
 const decipheredText = decipher(cipheredText, cipher)
+
 fs.writeFileSync('./deciphered.txt', decipheredText)
+console.log(decipheredText)
