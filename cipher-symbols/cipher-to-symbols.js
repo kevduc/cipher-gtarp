@@ -1,7 +1,6 @@
 const fs = require('fs')
-const HJSON = require('hjson')
 
-const cipher = new Map(HJSON.parse(fs.readFileSync('./cipher-to-symbols.hjson', 'utf-8')))
+const cipher = new Map(JSON.parse(fs.readFileSync('./cipher-to-symbols.json', 'utf-8')))
 const cipheredText = fs.readFileSync('../ciphered.txt', 'utf-8')
 
 // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
